@@ -17,13 +17,16 @@ namespace Partie4_Ex1
             Console.WriteLine($"la modification a été faite, à présent c'est { week[3]} ");
 
             //fonction ajout "arrayresize" + référence du tableau + taille 
-            Array.Resize(ref week, 7);
+            Array.Resize<string>(ref week, 7);
             week[6] = "dimanche";
             Console.WriteLine($"un dernier jour est ajouté { week[6]} ");
 
-            //boucle pour afficher tout le tableau 
-            for (int i = 0; i < week.Length; i++)
-            Console.WriteLine(week[i]);
+            //boucle pour parcourir un tableau sans se soucier de la taille et l'afficher dans day
+            foreach(string day in week)
+                {
+            Console.WriteLine(day);
+            }
+            
         }
         }
     }
